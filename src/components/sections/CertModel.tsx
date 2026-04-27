@@ -146,6 +146,24 @@ export default function CertModel() {
               the actions themselves.
             </p>
           </div>
+
+          <h3 className="font-mono text-lg font-bold text-text-primary">
+            One Caveat About Chain of Thought
+          </h3>
+
+          <p>
+            Discarding the chain of thought entirely gives up a signal worth
+            keeping. Its <em>content</em> is unreliable — features for deception
+            activate while the visible reasoning appears benign. But its{" "}
+            <em>shape</em> is harder to fake. A model carrying out a
+            sophisticated, multi-step plan has to externalise most of its
+            sequential reasoning, because that is where its working memory
+            lives. You cannot trust what the chain of thought says, but you can
+            watch how much of it there is, what topics it covers, and how far
+            it strays from the task it was given. Long, complex reasoning on a
+            simple task is itself a signal — regardless of what the reasoning
+            claims to be doing.
+          </p>
         </div>
       </div>
     </section>

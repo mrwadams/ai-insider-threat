@@ -115,7 +115,7 @@ export default function DetectionStrategies() {
 
         <Diagram
           src="/diagrams/detection_strategy.webp"
-          alt="Architecture diagram showing an AI agent at the centre with chain-of-thought crossed out as unreliable above, and four infrastructure monitoring layers around it: shell commands, network traffic, file system changes, and database queries. Banner reads 'Watch what it did, not what it said.'"
+          alt="Architecture diagram showing an AI agent at the centre. Above the agent, two panels split the chain of thought into Content (crossed out in red as unreliable) and Shape (in amber with a magnifying-glass icon, marked as a useful signal: length, depth, divergence from task). Around the agent, four infrastructure monitoring layers: shell commands, network traffic, file system changes, and database queries. Banner reads 'Watch what it did, not what it said.'"
         />
       </div>
     </section>

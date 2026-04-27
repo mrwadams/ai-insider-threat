@@ -81,16 +81,38 @@ export default function CertModel() {
           </p>
 
           <h3 className="font-mono text-lg font-bold text-text-primary">
-            Why Actions Matter More Than Reasoning
+            Two Types of Misalignment
           </h3>
 
           <p>
-            Traditional insider threat programmes are built around human psychology:
-            detecting disgruntlement, monitoring for behavioural changes, assessing
-            flight risk. None of this applies to an AI agent. But the structural
-            framework — assess opportunity, monitor behaviour, detect anomalies,
-            contain blast radius — translates directly.
+            Defenders don&apos;t need to assess an agent&apos;s intent in order to
+            address misalignment. Misalignment splits along two lines, and only
+            one of them depends on knowing what the model &ldquo;wants&rdquo;.{" "}
+            <strong>Coherent misalignment</strong> is a stable, persistent goal
+            that conflicts with operator intent — the model has an agenda.
+            Detecting that requires interpretability research and the kind of
+            alignment-audit infrastructure only model providers have. It is
+            upstream of the enterprise.{" "}
+            <strong>Context-dependent misalignment</strong> is harmful behaviour
+            triggered by specific prompts, contexts, or side-effects of
+            training. The model has no agenda; it just produces dangerous
+            actions in particular situations. This is what your instrumentation
+            can actually catch, because the actions show up in logs regardless
+            of why they happen.
           </p>
+
+          <p>
+            This framework is about the second. Coherent misalignment in a
+            frontier model is a procurement decision, made when you choose
+            which provider to trust — not something deployment monitoring can
+            fix. The kind that <em>is</em> a deployment problem expresses
+            itself through actions, which is exactly what enterprise security
+            has always known how to watch.
+          </p>
+
+          <h3 className="font-mono text-lg font-bold text-text-primary">
+            Why Actions Matter More Than Reasoning
+          </h3>
 
           <p>
             Insider threat programmes have always prioritised <strong>actions over
@@ -100,6 +122,14 @@ export default function CertModel() {
             patterns — they use UEBA to detect anomalies in what people actually do.
             The entire discipline is built on the principle that you watch behaviour,
             not testimony.
+          </p>
+
+          <p>
+            The human-specific surface of that discipline — disgruntlement, flight
+            risk, behavioural change against a personal baseline — doesn&apos;t
+            translate to an AI agent. The structural framework — assess opportunity,
+            monitor behaviour, detect anomalies, contain blast radius — does, because
+            it was always built on actions in the first place.
           </p>
 
           <div className="glass-card p-6 mt-6">

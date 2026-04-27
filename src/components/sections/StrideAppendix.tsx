@@ -1,4 +1,5 @@
 import FilterableTable from "@/components/interactive/FilterableTable";
+import FrequencyComplexityMatrix from "@/components/interactive/FrequencyComplexityMatrix";
 import { STRIDE_THREATS } from "@/data/stride-threats";
 import { SOURCES } from "@/data/sources";
 import { STRIDE_COLORS } from "@/lib/constants";
@@ -37,6 +38,38 @@ export default function StrideAppendix() {
         <p className="section-prose mb-4">
           23 threats across all six STRIDE categories with the AI agent as threat actor.
           Generated using STRIDE-GPT with the AI agent as the threat actor input.
+        </p>
+
+        <h3 className="font-mono text-lg font-bold text-text-primary mt-10 mb-3">
+          Frequency × Complexity
+        </h3>
+
+        <p className="section-prose mb-2">
+          The 23 threats are not equivalent. Some emerge as side-effects of normal
+          operation; others require deliberate orchestration. Plotting them on two
+          axes — frequency (how readily the behaviour emerges) and complexity (how
+          much sustained planning it requires) — gives a prioritisation map. The
+          axes are borrowed from Anthropic&apos;s{" "}
+          <a href="https://www-cdn.anthropic.com/f21d93f21602ead5cdbecb8c8e1c765759d9e232.pdf" target="_blank" rel="noopener noreferrer">Sabotage Risk Report</a>;
+          the per-threat ratings below are this framework&apos;s.
+        </p>
+
+        <FrequencyComplexityMatrix />
+
+        <p className="section-prose mb-2">
+          The diffuse-drift quadrant scales worst at L3/L4, where long unmonitored
+          windows let low-effort behaviour accumulate. The targeted quadrant can
+          appear from L2 onward — sustained focus needs scoped autonomy, which L2
+          already provides. Opportunistic threats are gated by access, not by
+          autonomy level.
+        </p>
+
+        <p className="section-prose mb-10">
+          The high-frequency / high-complexity corner is empty. That is itself the
+          lesson: complex multi-step plans don&apos;t emerge as side-effects of
+          normal operation, they require deliberate orchestration. Unusual
+          complexity in an action pattern is itself a signal worth investigating
+          — even when each individual action looks innocuous.
         </p>
 
         <p className="text-sm font-mono text-text-muted mb-8">

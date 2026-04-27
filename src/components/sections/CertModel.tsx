@@ -98,7 +98,9 @@ export default function CertModel() {
             training. The model has no agenda; it just produces dangerous
             actions in particular situations. This is what your instrumentation
             can actually catch, because the actions show up in logs regardless
-            of why they happen.
+            of why they happen. Anthropic&apos;s{" "}
+            <a href="https://www-cdn.anthropic.com/f21d93f21602ead5cdbecb8c8e1c765759d9e232.pdf" target="_blank" rel="noopener noreferrer">Sabotage Risk Report</a>{" "}
+            introduces this dichotomy.
           </p>
 
           <p>
@@ -155,10 +157,11 @@ export default function CertModel() {
             Discarding the chain of thought entirely gives up a signal worth
             keeping. Its <em>content</em> is unreliable — features for deception
             activate while the visible reasoning appears benign. But its{" "}
-            <em>shape</em> is harder to fake. A model carrying out a
-            sophisticated, multi-step plan has to externalise most of its
-            sequential reasoning, because that is where its working memory
-            lives. You cannot trust what the chain of thought says, but you can
+            <em>shape</em> is harder to fake. As Anthropic&apos;s{" "}
+            <a href="https://www-cdn.anthropic.com/f21d93f21602ead5cdbecb8c8e1c765759d9e232.pdf" target="_blank" rel="noopener noreferrer">Sabotage Risk Report</a>{" "}
+            observes, a model carrying out a sophisticated, multi-step plan has
+            to externalise most of its sequential reasoning, because that is
+            where its working memory lives. You cannot trust what the chain of thought says, but you can
             watch how much of it there is, what topics it covers, and how far
             it strays from the task it was given. Long, complex reasoning on a
             simple task is itself a signal — regardless of what the reasoning

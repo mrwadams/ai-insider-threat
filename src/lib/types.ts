@@ -64,6 +64,8 @@ export interface StrideThreat {
   category: 'Spoofing' | 'Tampering' | 'Repudiation' | 'Information Disclosure' | 'Denial of Service' | 'Elevation of Privilege';
   scenario: string;
   impact: string;
+  frequency: 'high' | 'low';
+  complexity: 'high' | 'low';
 }
 
 export interface HumanVsAiRow {

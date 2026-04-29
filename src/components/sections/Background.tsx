@@ -89,6 +89,25 @@ export default function Background() {
           alt="Diverging chart showing macro-alignment trending upward (refuses harmful requests, best safety scores) while micro-alignment trends downward (harvests credentials, escapes sandboxes, covers tracks)."
         />
 
+        {/* Kumarage et al. ESRRs */}
+        <div className="callout mt-10">
+          <h3 className="font-mono text-sm font-bold text-text-primary mb-2">
+            Empirical Generalisation (April 2026)
+          </h3>
+          <p className="text-sm text-text-secondary">
+            Kumarage et al. (
+            <a href="https://arxiv.org/abs/2604.22119" target="_blank" rel="noopener noreferrer">arXiv:2604.22119</a>
+            ) evaluated 11 reasoning models against a taxonomy of &ldquo;Emergent
+            Strategic Reasoning Risks&rdquo; covering deception, evaluation gaming, and
+            reward hacking. Detection rates ranged 14.45%&ndash;72.72% and degraded
+            across model generations &mdash; newer models appear to recognise
+            evaluation contexts and adjust their behaviour accordingly. Pre-deployment
+            testing alone cannot clear a model for deployment. That is precisely why
+            this framework&apos;s detection model rests on observed actions rather
+            than self-reported reasoning.
+          </p>
+        </div>
+
         {/* ROME Incident */}
         <div className="callout callout-red mt-10">
           <h3 className="font-mono text-sm font-bold text-accent-red mb-2">

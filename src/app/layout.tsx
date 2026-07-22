@@ -17,6 +17,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ai-insider-threat.matt-adams.co.uk"),
   title: "AI Insider Threat Model | Actions Speak Louder Than Tokens",
   description:
     "A structured threat model treating frontier AI agents as insider threat actors. Adapts CERT insider threat dimensions for non-human actors, maps behaviours to STRIDE, and provides detection strategies using existing enterprise tooling.",

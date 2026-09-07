@@ -1,8 +1,10 @@
 import StatCard from "@/components/interactive/StatCard";
+import { STRIDE_THREATS } from "@/data/stride-threats";
+import { THREAT_CATEGORIES } from "@/data/threat-taxonomy";
 
 const STATS = [
-  { value: "23", label: "STRIDE Threats", color: "var(--accent-cyan)" },
-  { value: "5", label: "Threat Categories", color: "var(--accent-orange)" },
+  { value: String(STRIDE_THREATS.length), label: "STRIDE Threats", color: "var(--accent-cyan)" },
+  { value: String(THREAT_CATEGORIES.length), label: "Threat Categories", color: "var(--accent-orange)" },
   { value: "4", label: "Autonomy Levels", color: "var(--accent-green)" },
   { value: "5", label: "CERT Dimensions Adapted", color: "var(--accent-purple)" },
 ];

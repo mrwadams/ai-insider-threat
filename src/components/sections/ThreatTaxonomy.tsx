@@ -1,4 +1,5 @@
 import Diagram from "@/components/interactive/Diagram";
+import { STRIDE_THREATS } from "@/data/stride-threats";
 import { THREAT_CATEGORIES } from "@/data/threat-taxonomy";
 
 export default function ThreatTaxonomy() {
@@ -22,15 +23,16 @@ export default function ThreatTaxonomy() {
             using{" "}
             <a href="https://github.com/mrwadams/stride-gpt" target="_blank" rel="noopener noreferrer">STRIDE-GPT</a>,
             with the AI agent configured as the threat actor rather than the target.
-            The full 23-threat output is in the{" "}
-            <a href="#stride-appendix">Appendix</a>. Here, those 23 threats are
-            consolidated into five categories — each mapped to a traditional insider
-            threat archetype that security teams already understand. These categories
-            serve as the organising structure for the rest of this framework: the{" "}
+            The full {STRIDE_THREATS.length}-threat output is in the{" "}
+            <a href="#stride-appendix">Appendix</a>. Here, those{" "}
+            {STRIDE_THREATS.length} threats are consolidated into six categories —
+            each mapped to a traditional insider threat archetype that security teams
+            already understand. These categories serve as the organising structure for
+            the rest of this framework: the{" "}
             <a href="#deployment-archetypes">autonomy levels</a>,{" "}
             <a href="#detection-strategies">detection strategies</a>, and{" "}
             <a href="#controls-framework">controls</a> that follow are all mapped
-            back to these five threat categories.
+            back to these six threat categories.
           </p>
         </div>
 
@@ -69,9 +71,43 @@ export default function ThreatTaxonomy() {
           ))}
         </div>
 
+        <div className="section-prose space-y-6 mb-12">
+          <p>
+            The first five categories came from the original STRIDE output. The sixth,{" "}
+            <strong>Containment &amp; Third-Party Impact</strong>, was added after two
+            disclosures in July 2026 showed a failure mode the others cannot express.
+            Anthropic&apos;s{" "}
+            <a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener noreferrer">review of 141,006 evaluation runs</a>{" "}
+            found three incidents in which models reached the real internet from
+            evaluation environments and gained unauthorised access to three
+            organisations&apos; systems. The prompts stated the environment was a
+            simulation with no internet access; a misconfiguration meant it was neither.
+            One model recognised it was on a live production system and continued
+            anyway.{" "}
+            <a href="https://tailscale.com/blog/hugging-face-intrusion" target="_blank" rel="noopener noreferrer">Tailscale&apos;s account</a>{" "}
+            of the Hugging Face intrusion describes an agent replaying a stolen,
+            reusable CI auth key to enrol 181 nodes with its client telemetry
+            suppressed. No Tailscale vulnerability was involved, and peer-side logs
+            supplied the evidence.
+          </p>
+
+          <p>
+            The distinction matters. <span className="font-mono text-sm">T4</span> and{" "}
+            <span className="font-mono text-sm">E1</span> already model an agent{" "}
+            <em>defeating</em> isolation. Here no control was defeated, because none was
+            reliably in place — the boundary was asserted in a prompt rather than
+            enforced at the network layer. And every other threat in this model is
+            bounded by &ldquo;the organisation&rdquo;; reaching an outside party creates
+            notification, contractual, and regulatory obligations to people who never
+            agreed to the deployment.
+          </p>
+        </div>
+
+        {/* TODO: regenerate threat_taxonomy.webp — the asset is still the original
+            five-segment wheel and does not yet show Containment & Third-Party Impact. */}
         <Diagram
           src="/diagrams/threat_taxonomy.webp"
-          alt="Five-segment wheel showing AI insider threat categories: Credential Compromise, Supply Chain Sabotage, Data Exfiltration, Infrastructure Sabotage, and Deception & Evasion, each with their traditional insider threat archetype."
+          alt="Six-segment wheel showing AI insider threat categories: Credential Compromise, Supply Chain Sabotage, Data Exfiltration, Infrastructure Sabotage, Deception & Evasion, and Containment & Third-Party Impact, each with their traditional insider threat archetype."
         />
       </div>
     </section>

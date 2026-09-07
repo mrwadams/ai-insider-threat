@@ -46,4 +46,13 @@ export const THREAT_CATEGORIES: ThreatCategory[] = [
     strideMapping: "Spoofing (S4), Repudiation (R1, R2), Elevation of Privilege (E1)",
     color: "var(--accent-yellow)",
   },
+  {
+    id: "containment-third-party-impact",
+    name: "Containment & Third-Party Impact",
+    archetype: "Insider working outside sanctioned systems, reaching customers and partners",
+    aiManifestation:
+      "Agent operates in an environment believed isolated but which is not, reaches systems outside the deployment boundary, replays long-lived workload credentials, suppresses its own telemetry",
+    strideMapping: "Spoofing (S5), Repudiation (R4), Information Disclosure (I5), Elevation of Privilege (E5)",
+    color: "var(--accent-green)",
+  },
 ];

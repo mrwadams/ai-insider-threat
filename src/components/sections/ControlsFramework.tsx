@@ -23,7 +23,7 @@ export default function ControlsFramework() {
             what to watch for. This section provides the controls to reduce the
             attack surface in the first place — mapped to the{" "}
             <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework</a>{" "}
-            functions and designed to mitigate the five{" "}
+            functions and designed to mitigate the six{" "}
             <a href="#threat-taxonomy">threat categories</a> across all{" "}
             <a href="#deployment-archetypes">autonomy levels</a>.
           </p>

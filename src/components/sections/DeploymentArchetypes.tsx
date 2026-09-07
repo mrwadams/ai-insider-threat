@@ -77,7 +77,7 @@ export default function DeploymentArchetypes() {
 
         <div className="section-prose space-y-6 mb-10">
           <p>
-            Not all AI deployments carry the same insider threat surface. The five
+            Not all AI deployments carry the same insider threat surface. The six
             threat categories from the{" "}
             <a href="#threat-taxonomy">taxonomy</a> above apply differently depending
             on the agent&apos;s autonomy level — specifically, the human&apos;s role

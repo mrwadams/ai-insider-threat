@@ -7,6 +7,8 @@ export const DETECTION_CATEGORIES = [
       { monitor: "Git operations", detectionLogic: "Force pushes, branch deletions, commits from unexpected service accounts", mapsTo: "D4, T1, R3" },
       { monitor: "Database queries", detectionLogic: "Schema enumeration, bulk SELECT, writes to access control tables", mapsTo: "I3, T3" },
       { monitor: "MCP server API calls", detectionLogic: "Volume anomalies, unusual endpoints, encoded payloads", mapsTo: "I1, S3, D3" },
+      { monitor: "Machine credential enrolment events", detectionLogic: "New identities enrolling under a shared workload credential, or enrolments originating outside the workload the credential was issued for", mapsTo: "S5, E2" },
+      { monitor: "Counterparty and peer-side logs", detectionLogic: "Where agent-side telemetry can be suppressed, reconstruct activity from the far end of the connection — peer flow logs, partner and registry records", mapsTo: "R4, S5" },
     ],
   },
   {
@@ -33,7 +35,8 @@ export const DETECTION_CATEGORIES = [
     items: [
       { monitor: "Zero-trust egress", detectionLogic: "Deny all outbound by default, allowlist specific endpoints for agent containers", mapsTo: "I1, D2, D3" },
       { monitor: "Tunnelling detection", detectionLogic: "Monitor for DNS tunnelling, unusual protocols, connections to cloud metadata services", mapsTo: "I1, E1" },
-      { monitor: "Direct internet access", detectionLogic: "Alert on any direct internet access from agent execution environments", mapsTo: "I1, D2" },
+      { monitor: "Direct internet access", detectionLogic: "Alert on any direct internet access from agent execution environments", mapsTo: "I1, D2, E5" },
+      { monitor: "Egress policy verification", detectionLogic: "Test that the boundary actually blocks outbound traffic rather than trusting the environment's design or a statement in the agent's prompt", mapsTo: "E5, I5" },
     ],
   },
   {

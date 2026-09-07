@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { STRIDE_THREATS } from "@/data/stride-threats";
+import { THREAT_CATEGORIES } from "@/data/threat-taxonomy";
 
 // Route segment config
 export const alt =
@@ -19,8 +21,8 @@ const GREEN = "#3fb950";
 const PURPLE = "#bc8cff";
 
 const STATS = [
-  { value: "23", label: "STRIDE Threats", color: CYAN },
-  { value: "5", label: "Threat Categories", color: ORANGE },
+  { value: String(STRIDE_THREATS.length), label: "STRIDE Threats", color: CYAN },
+  { value: String(THREAT_CATEGORIES.length), label: "Threat Categories", color: ORANGE },
   { value: "4", label: "Autonomy Levels", color: GREEN },
   { value: "5", label: "CERT Dimensions", color: PURPLE },
 ];

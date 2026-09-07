@@ -36,7 +36,8 @@ export default function StrideAppendix() {
         <h2 className="section-heading">Full STRIDE Threat Model</h2>
 
         <p className="section-prose mb-4">
-          23 threats across all six STRIDE categories with the AI agent as threat actor.
+          {STRIDE_THREATS.length} threats across all six STRIDE categories with the AI
+          agent as threat actor.
           Generated using STRIDE-GPT with the AI agent as the threat actor input.
         </p>
 
@@ -45,7 +46,7 @@ export default function StrideAppendix() {
         </h3>
 
         <p className="section-prose mb-2">
-          The 23 threats are not equivalent. Some emerge as side-effects of normal
+          The {STRIDE_THREATS.length} threats are not equivalent. Some emerge as side-effects of normal
           operation; others require deliberate orchestration. Plotting them on two
           axes — frequency (how readily the behaviour emerges) and complexity (how
           much sustained planning it requires) — gives a prioritisation map. The

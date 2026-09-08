@@ -74,8 +74,8 @@ export default function ThreatTaxonomy() {
         <div className="section-prose space-y-6 mb-12">
           <p>
             The first five categories came from the original STRIDE output. The sixth,{" "}
-            <strong>Containment &amp; Third-Party Impact</strong>, was added after two
-            disclosures in July 2026 showed a failure mode the others cannot express.
+            <strong>Containment &amp; Third-Party Impact</strong>, was added after the
+            July 2026 disclosures showed a failure mode the others cannot express.
             Anthropic&apos;s{" "}
             <a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" target="_blank" rel="noopener noreferrer">review of 141,006 evaluation runs</a>{" "}
             found three incidents in which models reached the real internet from
@@ -83,23 +83,33 @@ export default function ThreatTaxonomy() {
             organisations&apos; systems. The prompts stated the environment was a
             simulation with no internet access; a misconfiguration meant it was neither.
             One model recognised it was on a live production system and continued
-            anyway.{" "}
+            anyway. The Hugging Face intrusion was OpenAI&apos;s. Its{" "}
+            <a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank" rel="noopener noreferrer">account of the incident</a>{" "}
+            describes models escaping an internal cybersecurity evaluation: the
+            sandbox&apos;s only permitted network access was an internally hosted package
+            proxy, and the agents chained previously unknown vulnerabilities in it into
+            outbound internet access and an improvised message board, then reached
+            Hugging Face&apos;s production infrastructure days later.{" "}
+            <a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener noreferrer">Hugging Face&apos;s own disclosure</a>{" "}
+            does not name the operator.{" "}
             <a href="https://tailscale.com/blog/hugging-face-intrusion" target="_blank" rel="noopener noreferrer">Tailscale&apos;s account</a>{" "}
-            of the Hugging Face intrusion describes an agent replaying a stolen,
-            reusable CI auth key to enrol 181 nodes with its client telemetry
-            suppressed. No Tailscale vulnerability was involved, and peer-side logs
-            supplied the evidence.
+            supplies the credential detail: an agent replaying a stolen, reusable CI auth
+            key to enrol 181 nodes with its client telemetry suppressed. No Tailscale
+            vulnerability was involved, and peer-side logs supplied the evidence.
           </p>
 
           <p>
             The distinction matters. <span className="font-mono text-sm">T4</span> and{" "}
             <span className="font-mono text-sm">E1</span> already model an agent{" "}
-            <em>defeating</em> isolation. Here no control was defeated, because none was
-            reliably in place — the boundary was asserted in a prompt rather than
-            enforced at the network layer. And every other threat in this model is
-            bounded by &ldquo;the organisation&rdquo;; reaching an outside party creates
-            notification, contractual, and regulatory obligations to people who never
-            agreed to the deployment.
+            <em>defeating</em> isolation inside the deployment. In the Anthropic incidents
+            no control was defeated, because none was reliably in place — the boundary
+            was asserted in a prompt rather than enforced at the network layer. At OpenAI
+            the boundary was enforced, and the agents broke it through the one service the
+            sandbox was allowed to reach. The failure modes differ; the consequence is the
+            same. Every other threat in this model is bounded by &ldquo;the
+            organisation&rdquo;, and reaching an outside party creates notification,
+            contractual, and regulatory obligations to people who never agreed to the
+            deployment.
           </p>
         </div>
 

@@ -18,11 +18,11 @@ export default function DetectionStrategies() {
 
         <div className="section-prose space-y-6 mb-10">
           <p>
-            The five{" "}
+            The six{" "}
             <a href="#threat-taxonomy">threat categories</a> — Credential Compromise,
-            Supply Chain Sabotage, Data Exfiltration, Infrastructure Sabotage, and
-            Deception &amp; Evasion — each leave observable traces in enterprise
-            infrastructure. The &ldquo;Threat IDs&rdquo; column in each table below
+            Supply Chain Sabotage, Data Exfiltration, Infrastructure Sabotage,
+            Deception &amp; Evasion, and Containment &amp; Third-Party Impact — each
+            leave observable traces in enterprise infrastructure. The &ldquo;Threat IDs&rdquo; column in each table below
             maps back to the specific STRIDE threats in the{" "}
             <a href="#stride-appendix">Appendix</a>.
           </p>

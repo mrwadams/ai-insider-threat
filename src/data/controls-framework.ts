@@ -18,6 +18,7 @@ export const NIST_CONTROLS: NistControl[] = [
       "Network segmentation: zero-trust egress, no direct internet access, allowlisted endpoints only",
       "Database access: enforce read-only at infrastructure level (not prompt level), use dedicated database users with scoped permissions",
       "Tool integration hardening: fine-grained action-level authorisation on all external service connections, rate limiting (fail-closed), encrypted transport, PII detection on egress",
+      "Boundary verification: enforce isolation at the network layer and test that it holds — never assert containment in the agent's prompt or assume it from the environment's design",
     ],
   },
   {
@@ -36,6 +37,7 @@ export const NIST_CONTROLS: NistControl[] = [
       "Credential revocation: automated revocation of all credentials accessible to compromised agent",
       "Blast radius assessment: pre-mapped impact analysis for each deployment archetype",
       "Forensic readiness: immutable logs, action replay capability, reasoning trace preservation",
+      "Third-party notification: pre-agreed criteria, owner, and timeline for notifying external parties whose systems the agent reached, including downstream consumers of anything it published",
     ],
   },
   {

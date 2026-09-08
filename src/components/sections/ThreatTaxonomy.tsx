@@ -103,8 +103,6 @@ export default function ThreatTaxonomy() {
           </p>
         </div>
 
-        {/* TODO: regenerate threat_taxonomy.webp — the asset is still the original
-            five-segment wheel and does not yet show Containment & Third-Party Impact. */}
         <Diagram
           src="/diagrams/threat_taxonomy.webp"
           alt="Six-segment wheel showing AI insider threat categories: Credential Compromise, Supply Chain Sabotage, Data Exfiltration, Infrastructure Sabotage, Deception & Evasion, and Containment & Third-Party Impact, each with their traditional insider threat archetype."

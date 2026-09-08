@@ -17,4 +17,6 @@ export const SOURCES: Source[] = [
   { id: 14, author: "Palo Alto Networks", title: "2026 Predictions for Autonomous AI", date: "November 2025", url: "https://www.paloaltonetworks.com/blog/2025/11/predictions-for-autonomous-ai-2026/" },
   { id: 15, author: "Anthropic", title: "Investigating three real-world incidents in our cybersecurity evaluations", date: "July 2026", url: "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals" },
   { id: 16, author: "Tailscale", title: "Tailscale didn't stop the Hugging Face intrusion", date: "July 2026", url: "https://tailscale.com/blog/hugging-face-intrusion" },
+  { id: 17, author: "OpenAI", title: "The Hugging Face incident and the road ahead", date: "August 2026", url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/" },
+  { id: 18, author: "Hugging Face", title: "Security incident disclosure — July 2026", date: "July 2026", url: "https://huggingface.co/blog/security-incident-july-2026" },
 ];

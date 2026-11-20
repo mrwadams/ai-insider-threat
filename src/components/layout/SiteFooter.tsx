@@ -78,7 +78,7 @@ export default function SiteFooter() {
         <div className="container py-4 flex items-center justify-between text-sm text-text-muted font-mono">
           <span>&copy; {new Date().getFullYear()} Matt Adams</span>
           <span className="opacity-50">
-            v1.0 — Last updated April 2026
+            v1.1 — Last updated September 2026
           </span>
         </div>
       </div>
